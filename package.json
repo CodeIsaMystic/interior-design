@@ -8,6 +8,14 @@
     "serve": "cross-env NODE_ENV=dev webpack server --config ./webpack/webpack.config.dev.js",
     "build": "webpack --config ./webpack/webpack.config.prod.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeIsaMystic/interior-design.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CodeIsaMystic/interior-design/issues"
+  },
+  "homepage": "https://github.com/CodeIsaMystic/interior-design#readme",
   "keywords": [],
   "author": "",
   "license": "ISC",
