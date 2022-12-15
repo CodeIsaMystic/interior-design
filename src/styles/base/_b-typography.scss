@@ -1,0 +1,135 @@
+@use "../abstract" as *;
+
+/*=== Headings ===*/
+.b-heading-primary {
+  font-family: $secondary-font;
+  font-weight: normal;
+  font-size: 4.5vw;
+
+  line-height: 5vw;
+
+  color: $text-color;
+
+  &-large {
+    font-family: $secondary-font;
+    font-weight: normal;
+    font-size: 7vw;
+
+    line-height: 7.4vw;
+
+    color: $text-color;
+  }
+}
+
+.b-heading-secondary {
+  font-family: $secondary-font;
+  font-weight: normal;
+  font-size: 3.6vw;
+  font-size: 3.6vw;
+
+  line-height: 1.192307692;
+
+  letter-spacing: 0.2vw;
+
+  color: $text-color;
+}
+.b-heading-tertiary {
+  font-size: 1.3vw;
+  font-weight: 300;
+
+  letter-spacing: 0.3vw;
+
+  pointer-events: none;
+
+  color: $text-color;
+
+  z-index: 1;
+}
+
+/*=== Generic text ===*/
+.b-text {
+  font-family: $main-font;
+  font-size: 15px;
+  font-size: 1.04vw;
+
+  line-height: 30px;
+  line-height: 2.08vw;
+
+  letter-spacing: 0.5px;
+  letter-spacing: 0.03vw;
+
+  opacity: 0.6;
+}
+
+/*=== Quote text ===*/
+.b-quotes {
+  font-family: $secondary-font;
+  font-size: 40px;
+  font-size: 3.77vw;
+
+  line-height: 3.47vw;
+
+  letter-spacing: 1px;
+  letter-spacing: 0.06vw;
+
+  color: $text-color;
+}
+
+/* Sub Headings... */
+.b-chapter-typo {
+  font-family: $secondary-font;
+  font-size: 1.6vw;
+  font-weight: normal;
+
+  & span {
+    opacity: 0.4;
+  }
+}
+
+.b-subhead-typo,
+.b-item-typo {
+  font-family: $main-font;
+  font-size: 14px;
+  font-size: 0.97vw;
+  font-weight: 500;
+
+  line-height: 2.08vw;
+
+  letter-spacing: 4.5px;
+  letter-spacing: 0.31vw;
+
+  color: $color-light-300;
+  // color: $text-color;
+}
+
+.b-item-typo {
+  opacity: 0.4;
+
+  /* Add underline styles in js such as nav items */
+  &-is-active {
+    opacity: 1;
+  }
+}
+
+/* Uppercase typography */
+.b-upp-typo {
+  text-transform: uppercase;
+}
+
+/* TODO: handling color typo with js & css vars 
+such as --txt-color same as --bgc-color
+=> look at _a-variables.scss 
+*/
+/* Colors typography */
+.b-typo {
+  &-light {
+    color: $color-light-300;
+  }
+  &-dark {
+    color: $color-dark-300;
+  }
+  &-muted {
+    // color: $text-muted;
+    opacity: $text-op-muted;
+  }
+}

@@ -1,0 +1,102 @@
+@use "../abstract" as *;
+
+.c-headings-box {
+  & h1,
+  & h2 {
+    margin: 0;
+    padding-top: 30px;
+    padding-top: 2vw;
+  }
+}
+
+.c-journal-box {
+  & p {
+    margin-bottom: 53px;
+    margin-bottom: 3.47vw;
+  }
+  & h3 {
+    margin-bottom: 53px;
+    margin-bottom: 3.47vw;
+  }
+}
+
+.c-quotes-box {
+  & p {
+    margin-top: 6vw;
+    margin-bottom: 2vw;
+  }
+
+  & a {
+    margin-bottom: 6vw;
+    margin-top: 1vh;
+  }
+}
+
+.c-classic-box {
+  & h3 {
+    // margin-bottom: 53px;
+    margin-bottom: 2.08vw;
+  }
+  & p {
+    // margin-bottom: 53px;
+    margin-bottom: 2.08vw;
+  }
+  & a {
+  }
+}
+
+.c-text-box {
+  & h4 {
+    margin-bottom: 2vw;
+  }
+
+  & a {
+    margin-top: 1vh;
+  }
+}
+
+.c-contact-box {
+  & h3 {
+    // margin-bottom: 53px;
+    margin-bottom: 2.08vw;
+    color: $color-dark-300;
+  }
+  & p {
+    // margin-bottom: 53px;
+    margin-bottom: 2.08vw;
+    color: $color-dark-300;
+    opacity: 0.4;
+  }
+
+  // & .b-heading-secondary{
+  //   color: $color-dark-300;
+  // }
+  // & .b-text .b-typo-muted {
+  //   color: $color-dark-300;
+  //   opacity: 0.4;
+  // }
+
+  & .c-button-primary {
+    color: $color-dark-300;
+
+    &:after {
+      background-color: $color-dark-300;
+      // opacity: 1;
+    }
+    span {
+      &:nth-child(1),
+      &:nth-child(2) {
+        &:after,
+        &:before {
+          background-color: $color-dark-300;
+          // opacity: 1;
+        }
+      }
+    }
+    &:before {
+      background-size: 2.08vw;
+      background-repeat: no-repeat;
+      background-image: url("../assets/img/icon-arrow-black.svg");
+    }
+  }
+}

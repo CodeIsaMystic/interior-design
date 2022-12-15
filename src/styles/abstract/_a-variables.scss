@@ -1,0 +1,84 @@
+:root {
+  --header-height: 100px;
+  --burger-width: 40px;
+  --font-headings: Georgia, serif;
+
+  --text-color: white;
+  --text-dark-color: #202020;
+
+  --color-light-100: #ffffff;
+  --color-light-200: #f4f1ef;
+  --color-light-300: #e7e7e3;
+
+  --color-content-100: #aed6dc;
+  --color-content-200: #a6b3b3;
+  --color-content-300: #acb7ae;
+  --color-content-400: #c6b9b1;
+  --color-content-500: #b0a7a4;
+
+  --bcg-loaderblue: #758a94;
+  --bcg-loaderbluedark: #566c76;
+
+  --bgc-fill-color: var(--color-content-400);
+  --text-fill-color: var(--text-color);
+
+  --loader-width: 27.36vw;
+  --loader-height: 50vh;
+
+  --v-spacing: 10vh;
+  --v-spacing-large: 20vh;
+  --h-gutter: 6.6vw;
+
+  --easing: cubic-bezier(0.5, 0.7, 0.4, 1);
+}
+
+/* Color's variables */
+$color-light-100: #ffffff;
+$color-light-200: #f4f1ef;
+$color-light-300: #e7e7e3;
+
+$color-content-000: #b3d4fc;
+$color-content-100: #b4c6d9;
+$color-content-200: #758a94;
+$color-content-300: #566c76;
+
+$color-content-400: #aed6dc;
+$color-content-500: #a6b3b3;
+$color-content-600: #acb7ae;
+
+$color-content-700: #f6dcb4;
+$color-content-800: #c6b9b1;
+$color-content-900: #b0a7a4;
+
+$color-dark-100: #888888;
+$color-dark-200: #545454;
+$color-dark-300: #222222;
+
+/* Gradient's variables */
+
+/* Font's variables */
+$main-font: "Neue Montreal", sans-serif;
+$secondary-font: "EB Garamond", serif;
+
+/* Easing variable */
+$custom-easing: cubic-bezier(0.5, 0.7, 0.4, 1);
+
+/* Spacing & Gutter variables */
+$v-spacing: 10vh;
+$v-spacing-large: 20vh;
+$v-spacing-xlarge: 40vh;
+$h-gutter: 6.6vw;
+
+$loader-width: 27.36vw;
+$loader-height: 50vh;
+
+$header-height: 130px;
+$burger-width: 40px;
+
+/* TODO: checkout and setting up color handler dynamically */
+/* Dynamic CSS vars */
+$text-color: $color-light-300;
+$text-muted: $color-dark-200;
+$text-op-muted: 0.4;
+
+$bgc-document: $color-content-100;

@@ -1,0 +1,65 @@
+@use "./a-variables" as *;
+
+/* Another way to handle Responsivness */
+@mixin breakpoint($size) {
+  @if not map-has-key($breakpoints-up, $size) {
+    @warn "Warning: `#{$size}` is not a valid breakpoint name.";
+  } @else {
+    @media (min-width: map-get($breakpoints-up, $size)) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media screen and (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
+
+/* 
+Flexbox mixins= 
+is a bit repetitive 
+should be a best solution 
+*/
+@mixin flx-col-center() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flx-row-center() {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flx-col-start() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@mixin flx-col-end() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+@mixin flx-row-start() {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@mixin flx-row-end() {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}

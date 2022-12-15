@@ -1,0 +1,46 @@
+@use "../abstract/" as *;
+
+.l-portfolio {
+  background-color: $color-light-100;
+
+  &_categories {
+    display: flex;
+    flex-direction: column;
+
+    & a {
+      font-family: $secondary-font;
+      color: $color-dark-300;
+      text-decoration: none;
+      font-size: 7.2vw;
+      margin: auto;
+      letter-spacing: 0.2vw;
+      line-height: 1.5;
+
+      &:hover {
+        z-index: 1;
+      }
+    }
+  }
+
+  &_img-large,
+  &_img-small {
+    pointer-events: none; /* important to be able to hover over links under the image */
+    position: absolute;
+    width: 28vw;
+    top: 11vh;
+    left: 24vw;
+    overflow: hidden;
+    background-color: $color-dark-300;
+    visibility: hidden;
+  }
+
+  &_img-large {
+    padding-bottom: 41.66vw;
+  }
+  &_img-small {
+    width: 15vw;
+    top: 25vh;
+    left: 54vw;
+    padding-bottom: 20vw;
+  }
+}

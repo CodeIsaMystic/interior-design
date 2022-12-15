@@ -1,0 +1,42 @@
+@use "../abstract" as *;
+
+.c-circle {
+  /* Large Home Header's circle */
+  &-decor {
+    border: 1px $text-color solid;
+    border-radius: 100%;
+    width: 26vw;
+    height: 26vw;
+    position: absolute;
+    top: 40vh;
+    left: 29vw;
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Logo Animated svg circle */
+  &-animated {
+    width: 7.7vw;
+    height: 7.7vw;
+    position: absolute;
+    top: auto;
+    bottom: -1.5vw;
+    left: 75%;
+    background: url("../assets/img/logo-thoth-white.svg") no-repeat center;
+    background-size: 50% 50%;
+
+    animation: rotation 8s linear infinite;
+
+    &_logo {
+      width: 7.7vw;
+      height: 7.7vw;
+      background: url("../assets/img/img_scroll-badge.svg") no-repeat center;
+      background-size: 100% 100%;
+      // animation: rotation 10s linear infinite;
+      position: absolute;
+      top: 3px;
+      left: 0;
+    }
+  }
+}

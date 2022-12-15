@@ -1,0 +1,40 @@
+@use "../abstract" as *;
+
+.c-footer-menu {
+  margin: 0;
+  padding-bottom: 8.33vw;
+
+  & h3 {
+    margin-bottom: 2.08vw;
+
+    font-size: 22px;
+    font-size: 1.52vw;
+    line-height: 22px;
+    line-height: 1.52vw;
+    letter-spacing: 0.5px;
+    letter-spacing: 0.03vw;
+    font-family: $secondary-font;
+    font-weight: 400;
+  }
+
+  & ul {
+    & a > li,
+    & li {
+      opacity: 0.6;
+      cursor: pointer;
+      font-size: 15px;
+      font-size: 1.04vw;
+      padding: 0.34vw 0;
+      position: relative;
+      will-change: opacity;
+      backface-visibility: hidden;
+      transition: opacity 250ms ease-out;
+      color: #202020;
+    }
+  }
+
+  & .separation {
+    color: #202020;
+    opacity: 0.4;
+  }
+}

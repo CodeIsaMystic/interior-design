@@ -1,0 +1,51 @@
+@use "../abstract" as *;
+
+.main-nav {
+  position: fixed;
+  top: 0;
+  right: calc($h-gutter + 3vw);
+  z-index: 3;
+}
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.main-nav li {
+  padding: 0;
+  margin-right: 3vw;
+  height: $header-height;
+  display: flex;
+  align-items: center;
+}
+.main-nav a {
+  // color: $text-color;
+  color: $color-light-200;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  word-spacing: 3px;
+  position: relative;
+  overflow: hidden;
+}
+.main-nav a:after {
+  display: block;
+  content: "";
+  height: 2px;
+  background-color: $text-color;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateX(-101%);
+}
+.main-nav a:hover::after {
+  transition: transform 0.3s $custom-easing;
+  transform: translateX(0);
+}
+.main-nav a.animate-out::after {
+  transition: transform 0.3s $custom-easing;
+  transform: translateX(100%);
+}

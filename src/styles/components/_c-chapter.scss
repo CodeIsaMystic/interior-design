@@ -1,0 +1,26 @@
+@use "../abstract" as *;
+
+.c-chapter {
+  position: absolute;
+  top: $v-spacing;
+  left: $h-gutter;
+
+  z-index: 2;
+}
+
+.l-portfolio .c-chapter {
+  top: 0;
+
+  margin-top: 24vh;
+
+  color: $color-dark-300;
+}
+
+.l-articles .c-chapter,
+.contact .c-chapter {
+  position: relative;
+  top: inherit;
+  left: inherit;
+
+  margin: 0 $h-gutter $v-spacing $h-gutter;
+}

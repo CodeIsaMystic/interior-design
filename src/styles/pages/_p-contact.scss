@@ -1,0 +1,69 @@
+@use "../abstract" as *;
+
+#p-contact .main-nav li.is-active a::after {
+  display: block;
+  content: "";
+  height: 2px;
+  background-color: $color-light-200;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateX(0%);
+}
+
+#p-contact .c-circle-animated {
+  position: absolute;
+  top: 44.5vw;
+  left: 85%;
+
+  z-index: 5;
+}
+
+#p-contact .l-header-c {
+  width: 100vw;
+  width: 100%;
+  min-height: 100vh;
+
+  position: relative;
+
+  @include media(">=tablet") {
+  }
+
+  &_txt {
+    position: absolute;
+    top: 24.5vw;
+    left: 6.6vw;
+
+    max-width: 75%;
+  }
+
+  &_img {
+    // width: 50%;
+
+    margin: 0;
+
+    padding-bottom: 75.25%;
+
+    overflow: hidden;
+  }
+}
+
+.fake {
+  margin-top: -25.75%;
+  background-color: $color-light-200;
+  height: 55vh;
+  width: 100%;
+  position: relative;
+}
+
+.l-fake-a_txt {
+  position: absolute;
+  top: 4.5vw;
+  left: 6.6vw;
+
+  & h3,
+  & h2 {
+    color: $color-dark-300;
+    // color: $color-light-100;
+  }
+}

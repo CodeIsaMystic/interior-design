@@ -1,0 +1,44 @@
+{
+  "name": "interior-design",
+  "version": "1.0.0",
+  "description": "A webpack's multipages website...",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run serve",
+    "serve": "cross-env NODE_ENV=dev webpack server --config ./webpack/webpack.config.dev.js",
+    "build": "webpack --config ./webpack/webpack.config.prod.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.5",
+    "autoprefixer": "^10.2.6",
+    "babel-loader": "^8.2.2",
+    "browser-sync": "^2.27.7",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^9.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.2.6",
+    "html-loader": "^2.1.2",
+    "html-minimizer-webpack-plugin": "^3.1.0",
+    "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^1.6.0",
+    "postcss": "^8.3.5",
+    "postcss-loader": "^6.1.0",
+    "postcss-preset-env": "^6.7.0",
+    "sass": "^1.35.1",
+    "sass-loader": "^12.1.0",
+    "terser-webpack-plugin": "^5.2.4",
+    "webpack": "^5.39.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "gsap": "file:gsap-bonus.tgz",
+    "include-media": "^1.4.10",
+    "smooth-scrollbar": "^8.8.1"
+  }
+}

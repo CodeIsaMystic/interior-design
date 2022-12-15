@@ -1,0 +1,93 @@
+@use "../abstract" as *;
+
+/* =Header Gallery Padding Bottom Hack (random image proportion) 
+  
+  =>Calculate aspect by setting a width first, then adjust padding bottom.
+
+  === Examples ===
+  * ===Square=== * image that you want to show as 1/1 -
+  
+  width: 200px, padding-bottom => 100%
+  CALCULATION: (HEIGHT / WIDTH) * 100 =>  1/1
+  
+  width: 24vw, padding-bottom: (1/1) * width = 42.6vw
+
+  * ===Landscape=== * image that you want to show as 16/9 -
+  
+  width: 200px, padding-bottom => 56.25%
+  CALCULATION: (HEIGHT / WIDTH) * 100 =>  9/16 * 100
+  
+  width: 24vw, padding-bottom: (9/16) * width = 13.5vw
+  
+  * ===Portrait=== * image that you want to show as 9/16 -
+  
+  width: 200px, padding-bottom => 177.77%
+  CALCULATION: (HEIGHT / WIDTH) * 100 =>  16/9 * 100
+  
+  width: 24vw, padding-bottom: (16/9) * width = 42.6vw
+
+*/
+
+/*=== Layout gallery header ===*/
+.l-head-g {
+  /* Images positionning & padding bottom hack */
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $color-dark-300;
+    pointer-events: none;
+
+    &--large {
+      width: 18vw;
+      padding-bottom: 26vw;
+    }
+    &--medium {
+      width: 18vw;
+      padding-bottom: 26.55vw;
+    }
+    &--small {
+      width: 13vw;
+      padding-bottom: 19vw;
+    }
+  }
+
+  /* Two Columns layout */
+  &__left {
+    // background-color: #fff;
+    & .l-head-g__img:nth-child(1) {
+      top: 16vh;
+      left: 21vw;
+    }
+    & .l-head-g__img:nth-child(2) {
+      top: 38vh;
+      left: 13vw;
+    }
+    & .l-head-g__img:nth-child(3) {
+      top: 58vh;
+      left: 6vw;
+    }
+  }
+
+  &__right {
+    & .l-head-g__img:nth-child(1) {
+      top: 16vh;
+      left: auto;
+      right: 18vw;
+      width: 24vw;
+      padding-bottom: 21vw;
+    }
+    & .l-head-g__img:nth-child(2) {
+      top: 19vh;
+      left: auto;
+      right: 8vw;
+    }
+    & .l-head-g__img:nth-child(3) {
+      top: 51vh;
+      left: auto;
+      right: 19vw;
+      width: 16vw;
+      padding-bottom: 20vw;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@use "../abstract" as *;
+
+/*=== Global settings ===*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  scroll-behavior: smooth;
+  /* This set the font size of the site for 1rem  */
+  // font-size: 62.5%;
+
+  color: $color-dark-300;
+  line-height: 1.4;
+}
+
+::-moz-selection {
+  background: $color-content-000;
+  text-shadow: none;
+}
+
+::selection {
+  background: $color-content-000;
+  text-shadow: none;
+}
+
+body {
+  box-sizing: border-box;
+  font: 16px/1.7 $main-font;
+  color: $color-dark-300;
+  // background-color: $color-content-200;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  z-index: 1;
+  position: relative;
+}
+section {
+  position: relative;
+}
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+/*  init to 16px avoiding zooming on apple devices  */
+input[type="text"],
+input[type="email"] {
+  font-size: 16px;
+}

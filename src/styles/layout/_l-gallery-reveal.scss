@@ -1,0 +1,137 @@
+@use "../abstract" as *;
+
+.l-reveal-g__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $color-dark-300;
+  pointer-events: none;
+}
+
+.l-reveal-g {
+  display: flex;
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+
+  flex-direction: column;
+  justify-content: center;
+
+  overflow: hidden;
+  z-index: 1;
+
+  color: $color-light-100;
+
+  &__col {
+    position: relative;
+
+    display: flex;
+    flex-grow: 1; /* equivalent to 33.33% */
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 0 $h-gutter;
+
+    overflow: hidden;
+  }
+
+  &__txt--heading h3 {
+    font-size: 3.6vw;
+    line-height: 1.192307692;
+  }
+
+  &__txt--heading span {
+    font-size: 2vw;
+    opacity: 0.5;
+  }
+
+  /* TODO: b-typo.scss extract and checkout settings */
+  &__txt--heading h3,
+  &__txt--heading span,
+  .chapter {
+    font-family: $secondary-font;
+    font-weight: normal;
+  }
+
+  &__txt {
+    position: relative;
+    max-width: 17vw;
+
+    z-index: 1;
+
+    /* TODO: b-typo.scss extract and checkout settings */
+    &--copy {
+      font-weight: 300;
+      letter-spacing: 0.03vw;
+    }
+  }
+
+  &__col {
+    &::before {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      content: "";
+      width: 1px;
+      height: 20vh;
+      transform: translateY(-50%);
+      background-color: $color-light-100;
+      opacity: 0.4;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
+    // transform: translateY(-100%);
+    // transition: transform 0.45s var(--easing);
+
+    &--mask {
+      height: 100%;
+      overflow: hidden;
+      
+      // transition: transform 0.45s s;
+    }
+
+    & img {
+      opacity: 0.6;
+    }
+  }
+}
+
+.l-reveal-g__col.is-active .l-reveal-g__img,
+.l-reveal-g__col.is-active .l-reveal-g__img--mask {
+  
+  //   transform: translateY(0);
+}
+.l-reveal-g__txt--copy {
+  position: absolute;
+  overflow: hidden;
+}
+.l-reveal-g__txt--mask {
+  overflow: hidden;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 768px) {
+  .l-reveal-g {
+    flex-direction: row;
+    height: 100vh;
+    &__col {
+      min-height: auto;
+    }
+
+    &__text--copy {
+      position: absolute;
+      overflow: hidden;
+    }
+
+    &__text {
+      max-width: 17vw;
+    }
+  }
+}

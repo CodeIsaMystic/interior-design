@@ -1,0 +1,1 @@
+This folder contains all static files sush as site.webmanifest, favicons, robot.txt and many others static files copied to the root of dist folder.

@@ -1,0 +1,196 @@
+@use "../abstract" as *;
+
+
+.c-button-primary {
+  // height: 55px;
+  height: 3.81vw;
+  color: $color-light-200;
+  // padding: 0 25px;
+  padding: 0 1.73vw;
+  cursor: pointer;
+  // font-size: 22px;
+  font-size: 1.52vw;
+  // line-height: 55px;
+  line-height: 3.81vw;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.5px;
+  // background-size: 25px;
+  background-size: 1.73vw;
+  background-position: left 0.41vw;
+  font-family: $secondary-font;
+  //   @media #{$media-480} {
+  //     font-size: 20px;
+  //     height: 13.33vw;
+  //     font-size: 5.33vw;
+  //     padding: 0 6.66vw;
+  //     line-height: 13.33vw;
+  //   }
+
+  &:hover {
+    &:after {
+      height: 100%;
+      transition-delay: 250ms;
+    }
+
+    span {
+      &:nth-child(1),
+      &:nth-child(2) {
+        &:after,
+        &:before {
+          transition: all 250ms ease-out;
+          //   @media #{$media-480} {
+          //     transition: unset;
+          //   }
+        }
+
+        &:before {
+          width: 100%;
+        }
+
+        &:after {
+          height: 15px;
+        }
+      }
+
+      &:nth-child(1) {
+        &:before {
+          transition-delay: 0;
+        }
+
+        &:after {
+          transition-delay: 0;
+        }
+      }
+
+      &:nth-child(2) {
+        &:before {
+          transition-delay: 500ms;
+        }
+
+        &:after {
+          transition-delay: 750ms;
+        }
+      }
+    }
+  }
+
+  &:before {
+    // top: 22px;
+    top: 1.52vw;
+    // left: -15px;
+    left: -1.04vw;
+    content: "";
+    // width: 30px;
+    width: 2.08vw;
+    // height: 10px;
+    height: 0.69vw;
+    display: block;
+    position: absolute;
+    // color: $color-light-200;
+    // fill: $color-light-200;
+    // background-size: 30px;
+    background-size: 2.08vw;
+    background-repeat: no-repeat;
+    background-image: url("../assets/img/icon-arrow.svg");
+    // @media #{$media-480} {
+    //   width: 8vw;
+    //   left: -4vw;
+    //   top: 5.86vw;
+    //   height: 2.66vw;
+    //   background-size: 8vw;
+    // }
+  }
+
+  &:after {
+    top: 0;
+    right: 0;
+    height: 0;
+    width: 1px;
+    content: "";
+    opacity: 0.2;
+    position: absolute;
+    background-color: $color-light-200;
+    // background-color: $color-dark-300;
+    transition: all 250ms ease-out;
+    transition-delay: 500ms;
+    // @media #{$media-480} {
+    //   height: 100%;
+    //   transition: unset;
+    // }
+  }
+
+  span {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      &:after,
+      &:before {
+        left: 0;
+        content: "";
+        opacity: 0.2;
+        position: absolute;
+        background-color: $color-light-200;
+        // background-color: $color-dark-300;
+        transition: all 250ms ease-out;
+        // @media #{$media-480} {
+        //   transition: unset;
+        // }
+      }
+
+      &:before {
+        left: 0;
+        width: 0;
+        height: 1px;
+        // @media #{$media-480} {
+        //   width: 100%;
+        // }
+      }
+
+      &:after {
+        height: 0;
+        width: 1px;
+        // @media #{$media-480} {
+        //   height: 10px;
+        // }
+      }
+    }
+
+    &:nth-child(1) {
+      &:after,
+      &:before {
+        top: 0;
+        transition-delay: 750ms;
+        // @media #{$media-480} {
+        //   transition-delay: unset;
+        // }
+      }
+
+      &:before {
+        transition-delay: 750ms;
+        // @media #{$media-480} {
+        //   transition-delay: unset;
+        // }
+      }
+    }
+
+    &:nth-child(2) {
+      &:after,
+      &:before {
+        bottom: 0;
+      }
+
+      &:before {
+        right: 0;
+        left: unset;
+        transition-delay: 250ms;
+      }
+    }
+  }
+}

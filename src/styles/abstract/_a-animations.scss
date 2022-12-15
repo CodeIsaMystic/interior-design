@@ -1,0 +1,21 @@
+/* Both Logo and Burger button animation 
+Reveal logo and move buger when the user scrolls */
+.has-scrolled .c-btn-burger {
+  transform: translateX(100%);
+}
+.has-scrolled .c-btn-logo a .c-btn-logo__img {
+  opacity: 1;
+}
+.has-scrolled .c-btn-logo a .c-btn-logo__text {
+  opacity: 0;
+}
+
+/* CTA Circle logo animation */
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

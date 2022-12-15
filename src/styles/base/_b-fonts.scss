@@ -1,0 +1,76 @@
+@use "../abstract" as *;
+
+/* Main weight's font */
+@font-face {
+  font-family: $main-font;
+  src: url("../assets/fonts/NeueMontreal-Light.otf") format("otf");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $main-font;
+  src: url("../assets/fonts/NeueMontreal-Regular.otf") format("otf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $main-font;
+  src: url("../assets/fonts/NeueMontreal-Medium.otf") format("otf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $main-font;
+  src: url("../assets/fonts/NeueMontreal-Bold.otf") format("otf");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Italic font's style */
+@font-face {
+  font-family: $secondary-font;
+  src: url("../assets/fonts/NeueMontreal-Italic.otf") format("otf");
+  // font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Secondary weight's font */
+@font-face {
+  font-family: $secondary-font;
+  src: url("../assets/fonts/EBGaramond-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $secondary-font;
+  src: url("../assets/fonts/EBGaramond-Medium.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $secondary-font;
+  src: url("../assets/fonts/EBGaramond-SemiBold.ttf") format("ttf");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $secondary-font;
+  src: url("../assets/fonts/EBGaramond-Bold.ttf") format("ttf");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

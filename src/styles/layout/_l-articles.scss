@@ -1,0 +1,36 @@
+@use "../abstract" as *;
+
+/* Articles layout section */
+.l-articles {
+  color: $text-color;
+
+  margin-top: 4vw;
+}
+
+.l-articles {
+  /* TODO: Thought about extracting images handler */
+  &_img {
+    position: relative;
+    margin: 0 50% 0 16.6%;
+    overflow: hidden;
+
+    padding-bottom: 50%;
+
+    & img {
+      opacity: 1;
+      height: 120%;
+      top: -20%;
+    }
+  }
+
+  &_txt {
+    width: calc(100vw / 12 * 3);
+
+    position: absolute;
+    left: calc(50vw + $h-gutter);
+    right: calc($h-gutter * 4);
+    top: calc(50% + (8vh)); /* 50% not 50vh becasue l-articles is not 100vh */
+
+    transform: translateY(-50%);
+  }
+}
